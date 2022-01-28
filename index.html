@@ -73,6 +73,7 @@
   </section>
   <div id="galleryContainer">
   </div>
+  <div id="pageEnd" style="padding-top: '60px'"></div>
 
   <script type="text/javascript">
     let showMoreTags = document.getElementById('showMoreTags');
@@ -523,8 +524,9 @@
     ]
 
     async function setTags() {
-      //   let collections = await getCollections();
-      console.log(collections)
+      //   let tags = await getCollections();
+      let tags = collections;
+      console.log(tags)
       let tagContainer = document.getElementById("tagsContainer");
       let emptyDiv = document.createElement('div');
 
@@ -534,16 +536,16 @@
       mainTag.style.backgroundImage = "url('./Images//tag-main.jpg')";
       let mainDetails = document.createElement('div');
       let mainPostName = document.createElement('div');
-      mainPostName.innerText = collections[0].title;
+      mainPostName.innerText = tags[0].title;
       let mainPostCount = document.createElement('div');
-      mainPostCount.innerText = collections[0].media_count;
+      mainPostCount.innerText = 'FEATURED' + ' ⋅ ' + tags[0].media_count + 'Posts';
 
       mainDetails.append(mainPostName, mainPostCount);
       mainTag.append(emptyDiv, mainDetails);
 
       tagContainer.append(mainTag);
 
-      for (let i = 1; i < collections.length; i++) {
+      for (let i = 1; i < Math.min(47, tags.length); i++) {
         let emptyDiv = document.createElement('div');
         let tagDiv = document.createElement('div');
         tagDiv.className = "tag-normal";
@@ -551,9 +553,9 @@
 
         let tagDetails = document.createElement('div');
         let tagPostName = document.createElement('div');
-        tagPostName.innerText = collections[i].title;
+        tagPostName.innerText = tags[i].title;
         let tagPostCount = document.createElement('div');
-        tagPostCount.innerText = collections[i].media_count + ' posts';
+        tagPostCount.innerText = tags[i].media_count + ' Posts';
 
         tagDetails.append(tagPostName, tagPostCount);
         tagDiv.append(emptyDiv, tagDetails);
@@ -580,9 +582,12 @@
       }
     }
 
+    let galleryPage = 1;
+    let appending = false;
     async function getGalleryImages() {
       try {
-        let images = await fetch(`https://api.pexels.com/v1/search?query=funny&per_page=30&orientation=portrait`, {
+        appending = true;
+        let images = await fetch(`https://api.pexels.com/v1/search?query=funny&per_page=450&page=${galleryPage}&orientation=portrait`, {
           method: "GET",
           headers: {
             "Authorization": "563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee"
@@ -591,9 +596,12 @@
 
         let res = await images.json();
         console.log(res);
+        galleryPage++;
+        appending = false;
         return res.photos;
       } catch (err) {
         console.log(err.message);
+        appending = false;
       }
     }
 
@@ -1260,34 +1268,94 @@
     ]
 
     async function setGalleryImages() {
-      //   let images = await getGalleryImages();
+      let images = await getGalleryImages();
       //   console.log(images)
-      let images = imagesData
+      //   let images = imagesData
       let container = document.getElementById("galleryContainer");
 
       images.forEach(image => {
-        let cardDiv = document.createElement('div');
-        cardDiv.className = "gallery-img-card";
+        if (!image.image) {
+          let cardDiv = document.createElement('div');
+          cardDiv.className = "gallery-img-card";
 
-        let imgDiv = document.createElement('div');
-        let pic = document.createElement('img');
-        pic.src = image.src.portrait;
-        imgDiv.append(pic);
+          let imgDiv = document.createElement('div');
+          let pic = document.createElement('img');
+          pic.src = image.src.portrait;
+          imgDiv.append(pic);
 
-        let detailDiv = document.createElement('div');
-        let name = document.createElement('span');
-        let slicedName = image.alt.split(' ');
-        slicedName = slicedName[0] + ' ' + slicedName[1] || '' + ' ' + slicedName[2] || '';
-        name.innerText = slicedName;
-        detailDiv.append(name);
+          let detailDiv = document.createElement('div');
+          let name = document.createElement('span');
+          let slicedName = image.alt.split(' ');
+          slicedName = slicedName[0] + ' ' + slicedName[1] || '' + ' ' + slicedName[2] || '';
+          name.innerText = slicedName;
+          detailDiv.append(name);
 
-        cardDiv.append(imgDiv, detailDiv);
+          cardDiv.append(imgDiv, detailDiv);
 
-        container.append(cardDiv);
+          container.append(cardDiv);
+        }
+
       });
     }
 
     setGalleryImages();
+
+    let pageEnd = document.getElementById('pageEnd');
+
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+    }
+    let callback = (entries, observer) => {
+      entries.forEach(entry => {
+        // console.log(entry)
+        if (entry.target.id == 'pageEnd') {
+          if (entry.isIntersecting && !appending) {
+            setGalleryImages();
+          }
+        }
+      })
+    }
+    let observer = new IntersectionObserver(callback, options);
+    let target = document.getElementById('pageEnd');
+    observer.observe(target);
+
+
+    // imgur getTagData
+    // async function getTagsData() {
+    //   try {
+    //     let data = await fetch(`https://api.imgur.com/3/tags`, {
+    //       method: 'GET',
+    //       headers: {
+    //         "Authorization": "Client-ID 6e580c0f34720b7"
+    //       }
+    //     });
+    //     let res = await data.json();
+    //     console.log(res);
+    //     return (res.data.tags);
+    //   } catch (err) {
+    //     console.log(err.message);
+    //   }
+
+    // }
+
+    // imgur get ( many issues , doesn't allow easy access to images)
+    // async function getGallery() {
+    //   try {
+    //     let data = await fetch(`https://api.imgur.com/3/gallery/top/viral/month/1?showViral=true&mature=true&album_previews=true`, {
+    //       method: 'GET',
+    //       headers: {
+    //         "Authorization": "Client-ID 6e580c0f34720b7"
+    //       }
+    //     });
+    //     let res = await data.json();
+    //     console.log(res);
+    //     return (res.data);
+    //   } catch (err) {
+    //     console.log(err.message);
+    //   }
+    // }
   </script>
 </body>
 
@@ -1296,3 +1364,5 @@
 
 
 <!-- pexels api key: 563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee -->
+
+<!-- imgur client secret: 3608cd71c2b489802f92d824921569d846b4d8d6 -->
