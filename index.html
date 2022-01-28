@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Imgur: The magic of the Internet</title>
+</head>
+
+<body>
+  <nav class="navigation-container">
+    <div class="nav-left">
+      <div class="nav-logo">
+        <svg width="94" height="34" viewBox="0 0 94 34" class="icon stroke fill" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <title>Imgur</title>
+          <path d="M86.8012 17.336C86.8012 15.6108 86.981 15.0039 88.5637 14.3332C89.1292 14.0977 89.7077 13.9104 90.2587 13.7321C91.9506 13.1844 93.3833 12.7206 93.3833 11.2023C93.3833 9.86081 92.0884 8.71123 90.5059 8.71123C89.175 8.71123 87.8441 9.28632 86.6572 10.4038C85.9738 9.31751 85.0747 8.80659 83.9599 8.80659C82.0176 8.80659 81.1185 9.98884 81.1185 12.4487V22.5745C81.1185 25.0344 82.0176 26.2484 83.9599 26.2484C85.9018 26.2484 86.8012 25.0344 86.8012 22.5745V17.336Z" fill="#ffffff"></path>
+          <path d="M61.085 19.1569C61.085 23.9801 64.1422 26.5359 69.6448 26.5359C75.148 26.5359 78.2051 23.9801 78.2051 19.1569V12.4487C78.2051 9.98884 77.342 8.80659 75.3995 8.80659C73.4576 8.80659 72.5582 9.98884 72.5582 12.4487V18.1345C72.5582 20.4984 71.9469 21.8081 69.6448 21.8081C67.3433 21.8081 66.7314 20.4984 66.7314 18.1345V12.4487C66.7314 9.98884 65.8326 8.80659 63.9264 8.80659C61.9841 8.80659 61.085 9.98884 61.085 12.4487V19.1569Z" fill="#ffffff"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M48.245 33.3078C52.2732 33.3078 55.2229 31.9981 56.877 29.5382C57.9919 27.9092 58.2077 25.6094 58.2077 22.5745V12.4487C58.2077 9.98884 57.3086 8.80659 55.3663 8.80659C54.5036 8.80659 53.4964 9.34959 52.8485 10.4038C51.6982 9.19008 50.2589 8.61499 48.317 8.61499C43.4974 8.61499 39.5052 12.4166 39.5052 17.5276C39.5052 22.6387 43.2456 26.2802 47.7057 26.2802C49.9351 26.2802 51.6262 25.4814 52.8485 23.9163C52.8485 24.0322 52.8582 24.1398 52.8675 24.2432C52.8762 24.339 52.8845 24.4313 52.8845 24.5234C52.8845 27.2705 51.2304 28.7718 48.4607 28.7718C46.6897 28.7718 45.3742 28.2995 44.3043 27.9153C43.5708 27.652 42.9527 27.43 42.3822 27.43C40.9796 27.43 39.9367 28.3565 39.9367 29.6342C39.9367 31.6152 43.0655 33.3078 48.245 33.3078ZM45.3676 17.5276C45.3676 15.0039 46.9864 13.4067 49.0726 13.4067C51.1583 13.4067 52.8125 15.0039 52.8125 17.5276C52.8125 20.0829 51.1944 21.7442 49.0726 21.7442C46.9506 21.7442 45.3676 20.1149 45.3676 17.5276Z" fill="#ffffff"></path>
+          <path d="M31.5924 22.5745C31.5924 25.0344 32.4558 26.2484 34.3975 26.2484C36.34 26.2484 37.2388 25.0344 37.2388 22.5745V15.3553C37.2388 11.011 34.7573 8.74302 30.8371 8.74302C28.4996 8.74302 26.8446 9.41375 25.1184 11.1069C23.7877 9.54178 21.9172 8.74302 19.4717 8.74302C17.5655 8.74302 16.1268 9.25424 14.9396 10.4038C14.2563 9.31751 13.3575 8.80659 12.2426 8.80659C10.3 8.80659 9.40124 9.98884 9.40124 12.4487V22.5745C9.40124 25.0344 10.3 26.2484 12.2426 26.2484C14.1842 26.2484 15.0836 25.0344 15.0836 22.5745V16.8251C15.0836 14.3332 15.8753 13.0556 17.925 13.0556C19.7595 13.0556 20.4788 14.3332 20.4788 16.8887V22.5745C20.4788 25.0344 21.3776 26.2484 23.3202 26.2484C25.2624 26.2484 26.1615 25.0344 26.1615 22.5745V16.8251C26.1615 14.3332 26.9526 13.0556 29.0026 13.0556C30.8371 13.0556 31.5924 14.3332 31.5924 16.8887V22.5745Z" fill="#ffffff"></path>
+          <path d="M6.23549 12.4487C6.23549 9.98884 5.33669 8.80659 3.43046 8.80659C1.48851 8.80659 0.589111 9.98884 0.589111 12.4487V22.5745C0.589111 25.0344 1.48851 26.2484 3.43046 26.2484C5.373 26.2484 6.23549 25.0344 6.23549 22.5745V12.4487Z" fill="#ffffff"></path>
+          <path d="M3.51952 0.756104C1.58599 0.756104 0 2.1078 0 3.75626C0 5.43752 1.54695 6.7561 3.51952 6.7561C5.45305 6.7561 7 5.43752 7 3.75626C7 2.1078 5.45305 0.756104 3.51952 0.756104Z" fill="#1BB76E"></path>
+        </svg>
+      </div>
+      <button class="button-green" style="margin: 0 20px">
+        <img src="./Images/new-post.svg" alt="">
+        New post
+      </button>
+    </div>
+    <div class="nav-middle">
+      <div class="nav-search">
+        <input type="text" placeholder="Images, #tags, @users oh my!">
+        <div class="nav-search-icon">
+          <img src="./Images/search-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search-leaderboard-icon">
+        <svg width="32" height="32" viewBox="0 -2 34 34" class="uScaleTransition ProfileNavbar-item" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <title>Comment Leaderboard</title>
+          <g fill="none" fill-rule="evenodd">
+            <path d="M0 0h32v32H0z"></path>
+            <g transform="translate(6.5 3)" stroke="#ffffff" stroke-width="2">
+              <path d="M4 16.977v7.076l5.5-2.481 5.5 2.481v-7.076l-5.5 1.245L4 16.977z"></path>
+              <circle cx="9.5" cy="9.5" r="8.5"></circle>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <button class="button-purple">
+        Go Ad-Free
+      </button>
+      <span class="nav-signin">Sign in</span>
+      <button class="button-green" style="padding-top: 9px">Sign up</button>
+    </div>
+  </nav>
+  <section class="top-section">
+    <div>Life is ten percent what happens to you and ninety percent memes.
+    </div>
+    <div class="tags-area">
+      <div><span>EXPLORE TAGS</span><span id="showMoreTags" style="cursor: pointer">MORE TAGS +</span></div>
+      <div class="tags-container" id="tagsContainer">
+
+      </div>
+    </div>
+  </section>
+  <div id="galleryContainer">
+  </div>
+
+  <script type="text/javascript">
+    let showMoreTags = document.getElementById('showMoreTags');
+    showMoreTags.addEventListener('click', toggleMoreTags);
+
+
+    async function getCollections() {
+      try {
+        let collections = await fetch(`https://api.pexels.com/v1/collections/featured?per_page=47`, {
+          method: "GET",
+          headers: {
+            "Authorization": "563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee"
+          }
+        });
+
+        let res = await collections.json();
+        console.log(res);
+        return res.collections;
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
+
+
+    let collections = [{
+        "id": "dezhfpy",
+        "title": "Masked Up",
+        "description": "",
+        "private": false,
+        "media_count": 85,
+        "photos_count": 64,
+        "videos_count": 21
+      },
+      {
+        "id": "zlezwqr",
+        "title": "Just Nature",
+        "description": "",
+        "private": false,
+        "media_count": 205,
+        "photos_count": 169,
+        "videos_count": 36
+      },
+      {
+        "id": "rvtv3nd",
+        "title": "Bird Videos",
+        "description": "",
+        "private": false,
+        "media_count": 63,
+        "photos_count": 0,
+        "videos_count": 63
+      },
+      {
+        "id": "msgjob0",
+        "title": "Monkeys",
+        "description": "",
+        "private": false,
+        "media_count": 144,
+        "photos_count": 128,
+        "videos_count": 16
+      },
+      {
+        "id": "exbkhxu",
+        "title": "Workplace Videos",
+        "description": "",
+        "private": false,
+        "media_count": 44,
+        "photos_count": 0,
+        "videos_count": 44
+      },
+      {
+        "id": "qd3tbrf",
+        "title": "Cottagecore Aesthetic",
+        "description": "",
+        "private": false,
+        "media_count": 165,
+        "photos_count": 165,
+        "videos_count": 0
+      },
+      {
+        "id": "0b7stia",
+        "title": "Valentines Day Backgrounds",
+        "description": "",
+        "private": false,
+        "media_count": 82,
+        "photos_count": 82,
+        "videos_count": 0
+      },
+      {
+        "id": "0trkbkm",
+        "title": "Dark Academia Aesthetic",
+        "description": "",
+        "private": false,
+        "media_count": 69,
+        "photos_count": 68,
+        "videos_count": 1
+      },
+      {
+        "id": "r2hqfhc",
+        "title": "Colour Of 2022",
+        "description": "Purple is the official colour of 2022 💜",
+        "private": false,
+        "media_count": 127,
+        "photos_count": 110,
+        "videos_count": 17
+      },
+      {
+        "id": "nemqr89",
+        "title": "Silky Smooth",
+        "description": "",
+        "private": false,
+        "media_count": 66,
+        "photos_count": 48,
+        "videos_count": 18
+      },
+      {
+        "id": "ol3fmat",
+        "title": "Hellenistic Resurgence",
+        "description": "",
+        "private": false,
+        "media_count": 55,
+        "photos_count": 53,
+        "videos_count": 2
+      },
+      {
+        "id": "gwjcdph",
+        "title": "Grey Aesthetic",
+        "description": "",
+        "private": false,
+        "media_count": 100,
+        "photos_count": 100,
+        "videos_count": 0
+      },
+      {
+        "id": "sivum7s",
+        "title": "Time For A Cuppa",
+        "description": "",
+        "private": false,
+        "media_count": 132,
+        "photos_count": 104,
+        "videos_count": 27
+      },
+      {
+        "id": "akh751l",
+        "title": "Black & White Street",
+        "description": "",
+        "private": false,
+        "media_count": 100,
+        "photos_count": 100,
+        "videos_count": 0
+      },
+      {
+        "id": "1k3ks0m",
+        "title": "New Year Videos",
+        "description": "",
+        "private": false,
+        "media_count": 79,
+        "photos_count": 0,
+        "videos_count": 79
+      },
+      {
+        "id": "woimnaa",
+        "title": "Happy New Year",
+        "description": "",
+        "private": false,
+        "media_count": 75,
+        "photos_count": 56,
+        "videos_count": 19
+      },
+      {
+        "id": "omlacay",
+        "title": "Christmas Cakes",
+        "description": "",
+        "private": false,
+        "media_count": 62,
+        "photos_count": 47,
+        "videos_count": 15
+      },
+      {
+        "id": "amvhbpw",
+        "title": "Texture Videos",
+        "description": "",
+        "private": false,
+        "media_count": 105,
+        "photos_count": 0,
+        "videos_count": 105
+      },
+      {
+        "id": "wseswxf",
+        "title": "Bokeh Background Videos",
+        "description": "",
+        "private": false,
+        "media_count": 43,
+        "photos_count": 0,
+        "videos_count": 43
+      },
+      {
+        "id": "rhryly0",
+        "title": "Winter Solstice",
+        "description": "December 21st",
+        "private": false,
+        "media_count": 118,
+        "photos_count": 99,
+        "videos_count": 19
+      },
+      {
+        "id": "mboyk0q",
+        "title": "Pretty Backgrounds ",
+        "description": "🌸🌸🌸",
+        "private": false,
+        "media_count": 127,
+        "photos_count": 127,
+        "videos_count": 0
+      },
+      {
+        "id": "ganzgd5",
+        "title": "Coffee Videos",
+        "description": "",
+        "private": false,
+        "media_count": 88,
+        "photos_count": 0,
+        "videos_count": 88
+      },
+      {
+        "id": "me7ptaw",
+        "title": "Winter Videos",
+        "description": "",
+        "private": false,
+        "media_count": 127,
+        "photos_count": 0,
+        "videos_count": 127
+      },
+      {
+        "id": "liaeurl",
+        "title": "Christmas confectionery",
+        "description": "",
+        "private": false,
+        "media_count": 90,
+        "photos_count": 68,
+        "videos_count": 22
+      },
+      {
+        "id": "d7dnxu8",
+        "title": "Christmas Trees",
+        "description": "",
+        "private": false,
+        "media_count": 87,
+        "photos_count": 71,
+        "videos_count": 16
+      },
+      {
+        "id": "r0zgvaz",
+        "title": " People & Nature ",
+        "description": "🌼🌼🌼",
+        "private": false,
+        "media_count": 144,
+        "photos_count": 144,
+        "videos_count": 0
+      },
+      {
+        "id": "xtpuvuy",
+        "title": "Christmas Wallpapers",
+        "description": "A curated selection of desktop wallpapers.",
+        "private": false,
+        "media_count": 105,
+        "photos_count": 105,
+        "videos_count": 0
+      },
+      {
+        "id": "zvqsoqc",
+        "title": "Christmas Backgrounds",
+        "description": "A curated selection for your phone.",
+        "private": false,
+        "media_count": 144,
+        "photos_count": 144,
+        "videos_count": 0
+      },
+      {
+        "id": "qmpguql",
+        "title": "Futuristic",
+        "description": "",
+        "private": false,
+        "media_count": 109,
+        "photos_count": 85,
+        "videos_count": 24
+      },
+      {
+        "id": "masgnom",
+        "title": "I Put A spell On You",
+        "description": "Happy Halloween 🧙",
+        "private": false,
+        "media_count": 111,
+        "photos_count": 96,
+        "videos_count": 15
+      },
+      {
+        "id": "lymwncr",
+        "title": "Ghost Trend",
+        "description": "",
+        "private": false,
+        "media_count": 69,
+        "photos_count": 60,
+        "videos_count": 9
+      },
+      {
+        "id": "codmtu1",
+        "title": "Purple Flowers",
+        "description": "",
+        "private": false,
+        "media_count": 88,
+        "photos_count": 72,
+        "videos_count": 16
+      },
+      {
+        "id": "iarxkpe",
+        "title": "Black Cats 🐈‍⬛",
+        "description": "",
+        "private": false,
+        "media_count": 53,
+        "photos_count": 43,
+        "videos_count": 10
+      },
+      {
+        "id": "vvayv5y",
+        "title": "Womens Fashion",
+        "description": "",
+        "private": false,
+        "media_count": 85,
+        "photos_count": 0,
+        "videos_count": 85
+      },
+      {
+        "id": "ri7lyju",
+        "title": "Morning Videos",
+        "description": "",
+        "private": false,
+        "media_count": 126,
+        "photos_count": 0,
+        "videos_count": 126
+      },
+      {
+        "id": "vhkuffy",
+        "title": "Coding",
+        "description": "",
+        "private": false,
+        "media_count": 57,
+        "photos_count": 45,
+        "videos_count": 12
+      },
+      {
+        "id": "gmi0lkg",
+        "title": "Neon Wallpapers",
+        "description": "",
+        "private": false,
+        "media_count": 68,
+        "photos_count": 68,
+        "videos_count": 0
+      },
+      {
+        "id": "obs48rj",
+        "title": "Turquoise Backgrounds",
+        "description": "",
+        "private": false,
+        "media_count": 74,
+        "photos_count": 74,
+        "videos_count": 0
+      },
+      {
+        "id": "mjl3uir",
+        "title": "Luxury Apartments",
+        "description": "",
+        "private": false,
+        "media_count": 118,
+        "photos_count": 103,
+        "videos_count": 15
+      },
+      {
+        "id": "mcpqsra",
+        "title": "Frost",
+        "description": "",
+        "private": false,
+        "media_count": 62,
+        "photos_count": 49,
+        "videos_count": 13
+      },
+      {
+        "id": "64vvdlg",
+        "title": "Zoom Office Backgrounds",
+        "description": "",
+        "private": false,
+        "media_count": 73,
+        "photos_count": 73,
+        "videos_count": 0
+      },
+      {
+        "id": "z5cowgt",
+        "title": "Toys",
+        "description": "",
+        "private": false,
+        "media_count": 103,
+        "photos_count": 81,
+        "videos_count": 22
+      },
+      {
+        "id": "mm7pg4n",
+        "title": "Thanksgiving",
+        "description": "",
+        "private": false,
+        "media_count": 104,
+        "photos_count": 96,
+        "videos_count": 8
+      },
+      {
+        "id": "d2v22fv",
+        "title": "Early Mornings",
+        "description": "",
+        "private": false,
+        "media_count": 150,
+        "photos_count": 125,
+        "videos_count": 25
+      },
+      {
+        "id": "sr6yt5u",
+        "title": "Wedding Dresses",
+        "description": "",
+        "private": false,
+        "media_count": 124,
+        "photos_count": 97,
+        "videos_count": 27
+      },
+      {
+        "id": "wtfavo2",
+        "title": "Maximalism",
+        "description": "",
+        "private": false,
+        "media_count": 116,
+        "photos_count": 86,
+        "videos_count": 30
+      },
+      {
+        "id": "wekv3xs",
+        "title": "Shopping",
+        "description": "",
+        "private": false,
+        "media_count": 123,
+        "photos_count": 89,
+        "videos_count": 34
+      }
+    ]
+
+    async function setTags() {
+      //   let collections = await getCollections();
+      console.log(collections)
+      let tagContainer = document.getElementById("tagsContainer");
+      let emptyDiv = document.createElement('div');
+
+
+      let mainTag = document.createElement("div");
+      mainTag.className = "tag-main";
+      mainTag.style.backgroundImage = "url('./Images//tag-main.jpg')";
+      let mainDetails = document.createElement('div');
+      let mainPostName = document.createElement('div');
+      mainPostName.innerText = collections[0].title;
+      let mainPostCount = document.createElement('div');
+      mainPostCount.innerText = collections[0].media_count;
+
+      mainDetails.append(mainPostName, mainPostCount);
+      mainTag.append(emptyDiv, mainDetails);
+
+      tagContainer.append(mainTag);
+
+      for (let i = 1; i < collections.length; i++) {
+        let emptyDiv = document.createElement('div');
+        let tagDiv = document.createElement('div');
+        tagDiv.className = "tag-normal";
+        tagDiv.style.backgroundImage = "url('./Images//tag-main.jpg')"
+
+        let tagDetails = document.createElement('div');
+        let tagPostName = document.createElement('div');
+        tagPostName.innerText = collections[i].title;
+        let tagPostCount = document.createElement('div');
+        tagPostCount.innerText = collections[i].media_count + ' posts';
+
+        tagDetails.append(tagPostName, tagPostCount);
+        tagDiv.append(emptyDiv, tagDetails);
+
+        tagContainer.append(tagDiv);
+      }
+
+    }
+    setTags();
+
+    function toggleMoreTags() {
+      console.log('toggle');
+      let container = document.getElementById('tagsContainer');
+
+      if (container.style.overflowY == 'hidden') {
+        container.style.overflowY = 'visible'
+        container.style.height = 'auto'
+        showMoreTags.innerText = 'LESS TAGS -';
+
+      } else {
+        container.style.overflowY = 'hidden'
+        container.style.height = '150px'
+        showMoreTags.innerText = 'MORE TAGS +';
+      }
+    }
+
+    async function getGalleryImages() {
+      try {
+        let images = await fetch(`https://api.pexels.com/v1/search?query=funny&per_page=30&orientation=portrait`, {
+          method: "GET",
+          headers: {
+            "Authorization": "563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee"
+          }
+        });
+
+        let res = await images.json();
+        console.log(res);
+        return res.photos;
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
+
+    let imagesData = [{
+        "id": 3756616,
+        "width": 4067,
+        "height": 6100,
+        "url": "https://www.pexels.com/photo/portrait-photo-of-a-skeleton-in-sunglasses-and-wig-3756616/",
+        "photographer": "Andrea Piacquadio",
+        "photographer_url": "https://www.pexels.com/@olly",
+        "photographer_id": 224453,
+        "avg_color": "#747574",
+        "src": {
+          "original": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg",
+          "large2x": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/3756616/pexels-photo-3756616.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Portrait Photo of a Skeleton in Sunglasses and Wig"
+      },
+      {
+        "id": 2213575,
+        "width": 3041,
+        "height": 3935,
+        "url": "https://www.pexels.com/photo/selective-focus-photo-of-brown-monkey-2213575/",
+        "photographer": "Arindam Raha",
+        "photographer_url": "https://www.pexels.com/@arindam",
+        "photographer_id": 389224,
+        "avg_color": "#948478",
+        "src": {
+          "original": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg",
+          "large2x": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/2213575/pexels-photo-2213575.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Selective Focus Photo of Brown Monkey"
+      },
+      {
+        "id": 1670413,
+        "width": 3456,
+        "height": 5184,
+        "url": "https://www.pexels.com/photo/focus-photography-of-gray-monkey-1670413/",
+        "photographer": "prasanthdas ds",
+        "photographer_url": "https://www.pexels.com/@prasanthdas",
+        "photographer_id": 214567,
+        "avg_color": "#5C7C7A",
+        "src": {
+          "original": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg",
+          "large2x": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/1670413/pexels-photo-1670413.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Focus Photography of Gray Monkey"
+      },
+      {
+        "id": 1205033,
+        "width": 4000,
+        "height": 6000,
+        "url": "https://www.pexels.com/photo/man-sitting-on-floor-1205033/",
+        "photographer": "Hamann La",
+        "photographer_url": "https://www.pexels.com/@hamann-la-338986",
+        "photographer_id": 338986,
+        "avg_color": "#7F6B6A",
+        "src": {
+          "original": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg",
+          "large2x": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/1205033/pexels-photo-1205033.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Man Sitting on Floor"
+      },
+      {
+        "id": 10933264,
+        "width": 2784,
+        "height": 4176,
+        "url": "https://www.pexels.com/photo/woman-standing-on-pier-and-laughing-10933264/",
+        "photographer": "HONG SON",
+        "photographer_url": "https://www.pexels.com/@hson",
+        "photographer_id": 2206713,
+        "avg_color": "#A8B2B4",
+        "src": {
+          "original": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg",
+          "large2x": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/10933264/pexels-photo-10933264.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Woman Standing on Pier and Laughing"
+      },
+      {
+        "id": 929435,
+        "width": 3127,
+        "height": 4690,
+        "url": "https://www.pexels.com/photo/baby-in-white-and-red-floral-pajama-929435/",
+        "photographer": "Alexey Makhinko",
+        "photographer_url": "https://www.pexels.com/@alexey-makhinko-330734",
+        "photographer_id": 330734,
+        "avg_color": "#E0D8D9",
+        "src": {
+          "original": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg",
+          "large2x": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/929435/pexels-photo-929435.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Baby in White and Red Floral Pajama"
+      },
+      {
+        "id": 2853422,
+        "width": 3456,
+        "height": 5184,
+        "url": "https://www.pexels.com/photo/photo-of-siberian-husky-2853422/",
+        "photographer": "Kateryna Babaieva",
+        "photographer_url": "https://www.pexels.com/@kateryna-babaieva-1423213",
+        "photographer_id": 1423213,
+        "avg_color": "#747878",
+        "src": {
+          "original": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg",
+          "large2x": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/2853422/pexels-photo-2853422.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Photo Of Siberian Husky"
+      },
+      {
+        "id": 4588065,
+        "width": 3749,
+        "height": 5623,
+        "url": "https://www.pexels.com/photo/white-rabbit-wearing-yellow-eyeglasses-4588065/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#F5E489",
+        "src": {
+          "original": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg",
+          "large2x": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4588065/pexels-photo-4588065.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "White Rabbit Wearing Yellow Eyeglasses"
+      },
+      {
+        "id": 825947,
+        "width": 2888,
+        "height": 3306,
+        "url": "https://www.pexels.com/photo/closeup-photo-of-short-coated-white-and-gray-dog-825947/",
+        "photographer": "Gilberto Reyes",
+        "photographer_url": "https://www.pexels.com/@gilberto-reyes-259461",
+        "photographer_id": 259461,
+        "avg_color": "#DADADA",
+        "src": {
+          "original": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg",
+          "large2x": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Closeup Photo of Short-coated White and Gray Dog"
+      },
+      {
+        "id": 7312370,
+        "width": 4000,
+        "height": 6000,
+        "url": "https://www.pexels.com/photo/a-group-of-friends-intertwined-in-a-photoshoot-7312370/",
+        "photographer": "Yan Krukov",
+        "photographer_url": "https://www.pexels.com/@yankrukov",
+        "photographer_id": 2905570,
+        "avg_color": "#775A4A",
+        "src": {
+          "original": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg",
+          "large2x": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/7312370/pexels-photo-7312370.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "A Group of Friends Intertwined in a Photoshoot"
+      },
+      {
+        "id": 54204,
+        "width": 2565,
+        "height": 2642,
+        "url": "https://www.pexels.com/photo/woman-in-black-hooded-down-jacket-covering-her-face-with-grey-fingerless-gloves-54204/",
+        "photographer": "Kristin Vogt",
+        "photographer_url": "https://www.pexels.com/@kristingroth2",
+        "photographer_id": 1518,
+        "avg_color": "#898280",
+        "src": {
+          "original": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg",
+          "large2x": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/54204/pexels-photo-54204.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Woman in Black Hooded Down Jacket Covering Her Face With Grey Fingerless Gloves"
+      },
+      {
+        "id": 5993415,
+        "width": 4480,
+        "height": 6720,
+        "url": "https://www.pexels.com/photo/white-and-black-puppy-asleep-on-white-couch-5993415/",
+        "photographer": "Karolina Grabowska",
+        "photographer_url": "https://www.pexels.com/@karolina-grabowska",
+        "photographer_id": 2332540,
+        "avg_color": "#B9B1A7",
+        "src": {
+          "original": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg",
+          "large2x": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/5993415/pexels-photo-5993415.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "White and Black Puppy Asleep on White Couch"
+      },
+      {
+        "id": 8498520,
+        "width": 3465,
+        "height": 5197,
+        "url": "https://www.pexels.com/photo/two-dogs-on-brown-sofa-8498520/",
+        "photographer": "Yaroslav Shuraev",
+        "photographer_url": "https://www.pexels.com/@yaroslav-shuraev",
+        "photographer_id": 649765,
+        "avg_color": "#867561",
+        "src": {
+          "original": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg",
+          "large2x": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/8498520/pexels-photo-8498520.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "White Long Coat Medium Dog"
+      },
+      {
+        "id": 4587959,
+        "width": 3267,
+        "height": 4901,
+        "url": "https://www.pexels.com/photo/brown-tabby-cat-wearing-shower-cap-4587959/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#D9AEC6",
+        "src": {
+          "original": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg",
+          "large2x": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4587959/pexels-photo-4587959.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Brown Tabby Cat Wearing Shower Cap"
+      },
+      {
+        "id": 755834,
+        "width": 4000,
+        "height": 6000,
+        "url": "https://www.pexels.com/photo/brown-tabby-cat-sleeping-on-sofa-755834/",
+        "photographer": "FOX",
+        "photographer_url": "https://www.pexels.com/@fox-58267",
+        "photographer_id": 58267,
+        "avg_color": "#5C665E",
+        "src": {
+          "original": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg",
+          "large2x": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/755834/pexels-photo-755834.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Brown Tabby Cat Sleeping on Sofa"
+      },
+      {
+        "id": 755380,
+        "width": 2432,
+        "height": 3248,
+        "url": "https://www.pexels.com/photo/dachshund-dog-wearing-a-red-sweater-755380/",
+        "photographer": "Dominika Roseclay",
+        "photographer_url": "https://www.pexels.com/@punchbrandstock",
+        "photographer_id": 215243,
+        "avg_color": "#A19291",
+        "src": {
+          "original": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg",
+          "large2x": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/755380/pexels-photo-755380.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Dachshund Dog Wearing a Red Sweater"
+      },
+      {
+        "id": 3771605,
+        "width": 4000,
+        "height": 6000,
+        "url": "https://www.pexels.com/photo/cheerful-little-siblings-hugging-in-armchair-at-home-3771605/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#A9936D",
+        "src": {
+          "original": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg",
+          "large2x": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/3771605/pexels-photo-3771605.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Cheerful little siblings hugging in armchair at home"
+      },
+      {
+        "id": 5667944,
+        "width": 3744,
+        "height": 5616,
+        "url": "https://www.pexels.com/photo/cute-tabby-cat-on-gray-asphalt-road-5667944/",
+        "photographer": "ROMAN ODINTSOV",
+        "photographer_url": "https://www.pexels.com/@roman-odintsov",
+        "photographer_id": 2678846,
+        "avg_color": "#B29783",
+        "src": {
+          "original": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg",
+          "large2x": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/5667944/pexels-photo-5667944.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Cute Tabby Cat on Gray Asphalt Road"
+      },
+      {
+        "id": 662417,
+        "width": 3000,
+        "height": 4000,
+        "url": "https://www.pexels.com/photo/labrador-retriever-dog-662417/",
+        "photographer": "Amal  Santhosh",
+        "photographer_url": "https://www.pexels.com/@amalsanthosh",
+        "photographer_id": 207458,
+        "avg_color": "#786967",
+        "src": {
+          "original": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg",
+          "large2x": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/662417/pexels-photo-662417.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Labrador Retriever Dog"
+      },
+      {
+        "id": 4587991,
+        "width": 3857,
+        "height": 5786,
+        "url": "https://www.pexels.com/photo/white-and-black-french-bulldog-4587991/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#CED3D3",
+        "src": {
+          "original": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg",
+          "large2x": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "White and Black French Bulldog"
+      },
+      {
+        "id": 2835623,
+        "width": 3328,
+        "height": 4160,
+        "url": "https://www.pexels.com/photo/cute-short-fur-black-kitten-with-blue-eyes-2835623/",
+        "photographer": "Lad Fury",
+        "photographer_url": "https://www.pexels.com/@ladfury",
+        "photographer_id": 1354505,
+        "avg_color": "#A1A09E",
+        "src": {
+          "original": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg",
+          "large2x": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/2835623/pexels-photo-2835623.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": " Cute Short-fur Black Kitten With Blue Eyes"
+      },
+      {
+        "id": 2116524,
+        "width": 3225,
+        "height": 4837,
+        "url": "https://www.pexels.com/photo/woman-sitting-on-egg-chair-putting-her-foot-on-her-face-2116524/",
+        "photographer": "Marcelo  Moreira",
+        "photographer_url": "https://www.pexels.com/@marcelo-moreira-988124",
+        "photographer_id": 988124,
+        "avg_color": "#746E66",
+        "src": {
+          "original": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg",
+          "large2x": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/2116524/pexels-photo-2116524.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Woman Sitting on Egg Chair Putting Her Foot on Her Face"
+      },
+      {
+        "id": 4197483,
+        "width": 4480,
+        "height": 6720,
+        "url": "https://www.pexels.com/photo/funny-rat-terrier-with-paws-on-head-4197483/",
+        "photographer": "Karolina Grabowska",
+        "photographer_url": "https://www.pexels.com/@karolina-grabowska",
+        "photographer_id": 2332540,
+        "avg_color": "#91877D",
+        "src": {
+          "original": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg",
+          "large2x": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4197483/pexels-photo-4197483.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Funny Rat Terrier with paws on head"
+      },
+      {
+        "id": 4587955,
+        "width": 4160,
+        "height": 6240,
+        "url": "https://www.pexels.com/photo/brown-tabby-cat-with-slice-of-loaf-bread-on-head-4587955/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#C54C51",
+        "src": {
+          "original": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg",
+          "large2x": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4587955/pexels-photo-4587955.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Brown Tabby Cat With Slice Of Loaf Bread On Head"
+      },
+      {
+        "id": 6898856,
+        "width": 4480,
+        "height": 6720,
+        "url": "https://www.pexels.com/photo/yellow-paintedsmiley-face-eggs-6898856/",
+        "photographer": "ROMAN ODINTSOV",
+        "photographer_url": "https://www.pexels.com/@roman-odintsov",
+        "photographer_id": 2678846,
+        "avg_color": "#B9AE89",
+        "src": {
+          "original": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg",
+          "large2x": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/6898856/pexels-photo-6898856.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Yellow PaintedSmiley Face Eggs"
+      },
+      {
+        "id": 764340,
+        "width": 4016,
+        "height": 6016,
+        "url": "https://www.pexels.com/photo/boy-in-black-v-neck-shirt-with-looking-straight-to-the-camera-with-a-shocking-face-expression-764340/",
+        "photographer": "mohamed abdelghaffar",
+        "photographer_url": "https://www.pexels.com/@moh-adbelghaffar",
+        "photographer_id": 251848,
+        "avg_color": "#303030",
+        "src": {
+          "original": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg",
+          "large2x": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/764340/pexels-photo-764340.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Boy in Black V-neck Shirt With Looking Straight to the Camera With a Shocking Face Expression"
+      },
+      {
+        "id": 4587979,
+        "width": 3867,
+        "height": 5800,
+        "url": "https://www.pexels.com/photo/portrait-of-shiba-inu-dog-4587979/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#F8D6E2",
+        "src": {
+          "original": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg",
+          "large2x": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Portrait of Shiba Inu Dog"
+      },
+      {
+        "id": 4588047,
+        "width": 4061,
+        "height": 6091,
+        "url": "https://www.pexels.com/photo/cute-puppy-wearing-a-party-hat-4588047/",
+        "photographer": "Anna Shvets",
+        "photographer_url": "https://www.pexels.com/@shvetsa",
+        "photographer_id": 1984515,
+        "avg_color": "#E3D5CE",
+        "src": {
+          "original": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg",
+          "large2x": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Cute Puppy Wearing a Party Hat"
+      },
+      {
+        "id": 7414405,
+        "width": 2160,
+        "height": 3240,
+        "url": "https://www.pexels.com/photo/child-in-pink-crew-neck-shirt-holding-a-fork-7414405/",
+        "photographer": "Kampus Production",
+        "photographer_url": "https://www.pexels.com/@kampus",
+        "photographer_id": 3649784,
+        "avg_color": "#8D7172",
+        "src": {
+          "original": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg",
+          "large2x": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/7414405/pexels-photo-7414405.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Child in Pink Crew Neck Shirt Holding a Fork"
+      },
+      {
+        "id": 4466208,
+        "width": 4261,
+        "height": 6392,
+        "url": "https://www.pexels.com/photo/board-with-life-begins-after-coffee-message-and-coffee-cup-4466208/",
+        "photographer": "Karolina Grabowska",
+        "photographer_url": "https://www.pexels.com/@karolina-grabowska",
+        "photographer_id": 2332540,
+        "avg_color": "#A79D92",
+        "src": {
+          "original": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg",
+          "large2x": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "large": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "medium": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&h=350",
+          "small": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&h=130",
+          "portrait": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+          "landscape": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "tiny": "https://images.pexels.com/photos/4466208/pexels-photo-4466208.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+        },
+        "liked": false,
+        "alt": "Light up letter message board reading Life Begins After Coffee and ceramic coffee cup on table with green pot plant near pastel pink wall"
+      }
+    ]
+
+    async function setGalleryImages() {
+      //   let images = await getGalleryImages();
+      //   console.log(images)
+      let images = imagesData
+      let container = document.getElementById("galleryContainer");
+
+      images.forEach(image => {
+        let cardDiv = document.createElement('div');
+        cardDiv.className = "gallery-img-card";
+
+        let imgDiv = document.createElement('div');
+        let pic = document.createElement('img');
+        pic.src = image.src.portrait;
+        imgDiv.append(pic);
+
+        let detailDiv = document.createElement('div');
+        let name = document.createElement('span');
+        let slicedName = image.alt.split(' ');
+        slicedName = slicedName[0] + ' ' + slicedName[1] || '' + ' ' + slicedName[2] || '';
+        name.innerText = slicedName;
+        detailDiv.append(name);
+
+        cardDiv.append(imgDiv, detailDiv);
+
+        container.append(cardDiv);
+      });
+    }
+
+    setGalleryImages();
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- pexels api key: 563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee -->

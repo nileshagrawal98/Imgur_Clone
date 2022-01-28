@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+.navigation-container {
+    height: 66px;
+    padding: 15px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.navigation-container>div {
+    display: flex;
+}
+
+.nav-logo {
+    cursor: pointer;
+}
+
+.nav-middle {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-search {
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-search>input {
+    height: 36px;
+    background-color: rgba(153, 153, 153, 0.4);
+    border: none;
+    outline: none;
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 10px 8px 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.nav-search>input::-webkit-input-placeholder {
+    color: #ddd;
+    font-weight: 400;
+}
+
+.nav-search-icon {
+    height: 36px;
+    background-color: rgba(153, 153, 153, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 10px;
+    cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.nav-search-icon>img {
+    width: 100%;
+}
+
+.nav-search-leaderboard-icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.nav-signin {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    margin: auto 24px;
+    width: 100%;
+    min-width: 50px;
+    cursor: pointer;
+}
