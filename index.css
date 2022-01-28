@@ -58,6 +58,7 @@
     border-radius: 3px;
     margin: 6px 6px 6px 0;
     transition: transform 300ms ease;
+    cursor: pointer;
 }
 
 .tag-main>div:nth-of-type(2) {
