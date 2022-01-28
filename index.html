@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navigation-container">
+  <nav class="navigation-container-one" id="navigationContainerOne">
     <div class="nav-left">
       <div class="nav-logo">
         <svg width="94" height="34" viewBox="0 0 94 34" class="icon stroke fill" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,6 +61,64 @@
       <button class="button-green" style="padding-top: 9px">Sign up</button>
     </div>
   </nav>
+
+  <nav class="navigation-container-two" id="navigationContainerTwo">
+    <div class="nav-left">
+      <div class="nav-logo">
+        <img src="./Images/small-logo.png" alt="imgur">
+      </div>
+      <div class="dropdown-button-container">
+        <span>MOST VIRAL</span>
+        <span><img src="./Images/dropdown_icon.svg" alt="" width="24px"></span>
+      </div>
+    </div>
+    <div class="nav-middle">
+      <div class="nav-search">
+        <input type="text" placeholder="Images, #tags, @users oh my!">
+        <div class="nav-search-icon">
+          <img src="./Images/search-icon.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="dropdown-button-container">
+        <span>POPULAR</span>
+        <span><img src="./Images/dropdown_icon.svg" alt="" width="24px"></span>
+      </div>
+      <div class="nav-two-right-options">
+        <span><img src="./Images/filter_icon.svg" alt=""></span>
+        <span><img src="./Images/pause_icon.svg" alt=""></span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="17" height="17">
+            <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"></rect>
+            <g>
+              <g>
+                <g>
+                  <polygon fill="#BABEC4" points="6.17870715566179,0 1.1573245256338325,0 0.15306144952774048,0 0.15306144952774048,1.0042672515679527 0.15306144952774048,6.0256540079346905 0.15306144952774048,7.02991762439467 1.1573245256338325,7.02991762439467 6.17870715566179,7.02991762439467 7.18298727747689,7.02991762439467 7.18298727747689,6.0256540079346905 7.18298727747689,1.0042672515679527 7.18298727747689,0 "></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon fill="#BABEC4" points="6.278707504272461,10 1.25732421875,10 0.25306129455566406,10 0.25306129455566406,11.004266738891602 0.25306129455566406,16.025653839111328 0.25306129455566406,17.029918670654297 1.25732421875,17.029918670654297 6.278707504272461,17.029918670654297 7.282987594604492,17.029918670654297 7.282987594604492,16.025653839111328 7.282987594604492,11.004266738891602 7.282987594604492,10 "></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon fill="#BABEC4" points="15.978708267211914,9.900003053247929 10.957324981689453,9.900003053247929 9.953062057495117,9.900003053247929 9.953062057495117,10.90426979213953 9.953062057495117,15.925656892359257 9.953062057495117,16.929921723902225 10.957324981689453,16.929921723902225 15.978708267211914,16.929921723902225 16.982988357543945,16.929921723902225 16.982988357543945,15.925656892359257 16.982988357543945,10.90426979213953 16.982988357543945,9.900003053247929 "></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon fill="#BABEC4" points="15.878707885742188,-0.10000000149011612 10.857324600219727,-0.10000000149011612 9.85306167602539,-0.10000000149011612 9.85306167602539,0.9042667374014854 9.85306167602539,5.925653837621212 9.85306167602539,6.929918669164181 10.857324600219727,6.929918669164181 15.878707885742188,6.929918669164181 16.88298797607422,6.929918669164181 16.88298797607422,5.925653837621212 16.88298797607422,0.9042667374014854 16.88298797607422,-0.10000000149011612 "></polygon>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </nav>
+
   <section class="top-section">
     <div>Life is ten percent what happens to you and ninety percent memes.
     </div>
@@ -75,11 +133,36 @@
   </div>
   <div id="pageEnd" style="padding-top: '60px'"></div>
 
+
+  <footer id="footerBar">
+    <div>
+      <ul>
+        <li>2022 Imgur, Inc</li>
+        <li>About</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+        <li>Rules</li>
+        <li>Help</li>
+        <li>Emerald</li>
+        <li>Store</li>
+        <li>Advertise</li>
+        <li>Blog</li>
+        <li>Wellness</li>
+        <li>CCPA</li>
+        <li>Api</li>
+      </ul>
+    </div>
+    <div class="footer-bar-getapp">
+      Get the App
+    </div>
+  </footer>
+
   <script type="text/javascript">
     let showMoreTags = document.getElementById('showMoreTags');
     showMoreTags.addEventListener('click', toggleMoreTags);
 
 
+    // using pexel api
     async function getCollections() {
       try {
         let collections = await fetch(`https://api.pexels.com/v1/collections/featured?per_page=47`, {
@@ -570,7 +653,7 @@
       console.log('toggle');
       let container = document.getElementById('tagsContainer');
 
-      if (container.style.overflowY == 'hidden') {
+      if (container.style.overflowY !== 'visible') {
         container.style.overflowY = 'visible'
         container.style.height = 'auto'
         showMoreTags.innerText = 'LESS TAGS -';
@@ -584,6 +667,8 @@
 
     let galleryPage = 1;
     let appending = false;
+
+    // using pexel api
     async function getGalleryImages() {
       try {
         appending = true;
@@ -1268,9 +1353,9 @@
     ]
 
     async function setGalleryImages() {
-      let images = await getGalleryImages();
+      //   let images = await getGalleryImages();
       //   console.log(images)
-      //   let images = imagesData
+      let images = imagesData
       let container = document.getElementById("galleryContainer");
 
       images.forEach(image => {
@@ -1315,11 +1400,40 @@
             setGalleryImages();
           }
         }
-      })
+      });
     }
     let observer = new IntersectionObserver(callback, options);
     let target = document.getElementById('pageEnd');
     observer.observe(target);
+
+    let options2 = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0
+    }
+    let callback2 = (entries, navObserver) => {
+      entries.forEach(entry => {
+        // console.log(entry)
+        if (entry.target.id == 'tagsContainer') {
+          if (!entry.isIntersecting) {
+            // document.getElementById('navigationContainerOne').style.display = 'none';
+            document.getElementById('navigationContainerOne').style.transform = 'translateY(-120px)';
+            // document.getElementById('navigationContainerTwo').style.display = 'flex';
+            document.getElementById('navigationContainerTwo').style.transform = 'translateY(0px)';
+            document.getElementById('footerBar').style.transform = 'translateY(60px)';
+
+          } else {
+            // document.getElementById('navigationContainerOne').style.display = 'flex';
+            document.getElementById('navigationContainerOne').style.transform = 'translateY(0px)';
+            // document.getElementById('navigationContainerTwo').style.display = 'none';
+            document.getElementById('navigationContainerTwo').style.transform = 'translateY(-120px)';
+            document.getElementById('footerBar').style.transform = 'translateY(0px)';
+          }
+        }
+      });
+    }
+    let navObserver = new IntersectionObserver(callback2, options2)
+    navObserver.observe(document.getElementById('tagsContainer'));
 
 
     // imgur getTagData
@@ -1341,6 +1455,7 @@
     // }
 
     // imgur get ( many issues , doesn't allow easy access to images)
+    // when using this api make sure to use localhost instead of 127.0.0.1
     // async function getGallery() {
     //   try {
     //     let data = await fetch(`https://api.imgur.com/3/gallery/top/viral/month/1?showViral=true&mature=true&album_previews=true`, {
@@ -1356,6 +1471,7 @@
     //     console.log(err.message);
     //   }
     // }
+    // getGallery();
   </script>
 </body>
 
