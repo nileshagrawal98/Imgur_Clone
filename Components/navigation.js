@@ -1,14 +1,14 @@
 let setNavigation = (container, navBg) => {
 
-    let navCss = document.createElement('link');
-    navCss.rel = 'stylesheet';
-    navCss.href = '../Styles/navigation.css';
-    document.getElementsByTagName('head')[0].append(navCss);
+  let navCss = document.createElement('link');
+  navCss.rel = 'stylesheet';
+  navCss.href = '../Styles/navigation.css';
+  document.getElementsByTagName('head')[0].append(navCss);
 
-    container.innerHTML = `
+  container.innerHTML = `
     <nav class="navigation-container-one" id="navigationContainerOne">
     <div class="nav-left">
-      <div class="nav-logo">
+      <div class="nav-logo" onclick="window.location.href='./'">
         <svg width="94" height="34" viewBox="0 0 94 34" class="icon stroke fill" fill="none" xmlns="http://www.w3.org/2000/svg">
           <title>Imgur</title>
           <path d="M86.8012 17.336C86.8012 15.6108 86.981 15.0039 88.5637 14.3332C89.1292 14.0977 89.7077 13.9104 90.2587 13.7321C91.9506 13.1844 93.3833 12.7206 93.3833 11.2023C93.3833 9.86081 92.0884 8.71123 90.5059 8.71123C89.175 8.71123 87.8441 9.28632 86.6572 10.4038C85.9738 9.31751 85.0747 8.80659 83.9599 8.80659C82.0176 8.80659 81.1185 9.98884 81.1185 12.4487V22.5745C81.1185 25.0344 82.0176 26.2484 83.9599 26.2484C85.9018 26.2484 86.8012 25.0344 86.8012 22.5745V17.336Z" fill="#ffffff"></path>
@@ -26,9 +26,9 @@ let setNavigation = (container, navBg) => {
     </div>
     <div class="nav-middle">
       <div class="nav-search">
-        <input type="text" placeholder="Images, #tags, @users oh my!">
+        <input type="text" placeholder="Images, #tags, @users oh my!" id="searchInputBox1">
         <div class="nav-search-icon">
-          <img src="./Images/search-icon.svg" alt="">
+          <img src="./Images/search-icon.svg" alt="" id="searchBtn1">
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@ let setNavigation = (container, navBg) => {
   <nav class="navigation-container-two" id="navigationContainerTwo" style='background-image: url(${navBg})'>
     <div class="nav-left">
       <div class="nav-logo">
-        <img src="./Images/small-logo.png" alt="imgur">
+        <img src="./Images/small-logo.png" alt="imgur" onclick="window.location.href='./'">
       </div>
       <div class="dropdown-button-container">
         <span>MOST VIRAL</span>
@@ -64,9 +64,9 @@ let setNavigation = (container, navBg) => {
     </div>
     <div class="nav-middle">
       <div class="nav-search">
-        <input type="text" placeholder="Images, #tags, @users oh my!">
+        <input type="text" placeholder="Images, #tags, @users oh my!" id="searchInputBox2">
         <div class="nav-search-icon">
-          <img src="./Images/search-icon.svg" alt="">
+          <img src="./Images/search-icon.svg" alt="" id="searchBtn2">
         </div>
       </div>
     </div>
@@ -110,12 +110,36 @@ let setNavigation = (container, navBg) => {
   </nav>
   `;
 
+
+  document.getElementById('searchInputBox2').addEventListener('keypress', (e) => handleSearchKey(e));
+  document.getElementById('searchInputBox1').addEventListener('keypress', (e) => handleSearchKey(e));
+  document.getElementById('searchBtn1').addEventListener('click', () => {
+    setTag(document.getElementById('searchInputBox1').value);
+  });
+  document.getElementById('searchBtn2').addEventListener('click', () => {
+    setTag(document.getElementById('searchInputBox2').value);
+  });
+
+}
+
+// using this instead of proper debouncing as imgur api remains down mostly, (at the time of development).
+function setTag(name) {
+  // console.log(name)
+  if (name.trim() === '') return;
+  localStorage.setItem('tag', JSON.stringify({ display_name: name }));
+  window.location.href = './tags.html';
+}
+
+function handleSearchKey(e) {
+  if (e.keyCode === 13 && e.target.value.trim() !== '') {
+    setTag(e.target.value.trim());
+  }
 }
 
 let setFooter = () => {
-    let footer = document.createElement('footer');
-    footer.id = 'footerBar';
-    footer.innerHTML = `<div>
+  let footer = document.createElement('footer');
+  footer.id = 'footerBar';
+  footer.innerHTML = `<div>
     <ul>
       <li>2022 Imgur, Inc</li>
       <li>About</li>
@@ -136,36 +160,63 @@ let setFooter = () => {
     Get the App
   </div>`
 
-    document.body.append(footer);
+  document.body.append(footer);
 }
 
 let options2 = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.4
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.4
 }
 let callback2 = (entries, navObserver) => {
-    entries.forEach(entry => {
-        // console.log(entry)
-        if (entry.target.id == 'topSection') {
-            if (!entry.isIntersecting) {
-                // document.getElementById('navigationContainerOne').style.display = 'none';
-                document.getElementById('navigationContainerOne').style.transform = 'translateY(-120px)';
-                // document.getElementById('navigationContainerTwo').style.display = 'flex';
-                document.getElementById('navigationContainerTwo').style.transform = 'translateY(120px)';
-                document.getElementById('footerBar').style.transform = 'translateY(60px)';
+  entries.forEach(entry => {
+    // console.log(entry)
+    if (entry.target.id == 'topSection') {
+      if (!entry.isIntersecting) {
+        // document.getElementById('navigationContainerOne').style.display = 'none';
+        document.getElementById('navigationContainerOne').style.transform = 'translateY(-120px)';
+        // document.getElementById('navigationContainerTwo').style.display = 'flex';
+        document.getElementById('navigationContainerTwo').style.transform = 'translateY(120px)';
+        document.getElementById('footerBar').style.transform = 'translateY(60px)';
 
-            } else {
-                // document.getElementById('navigationContainerOne').style.display = 'flex';
-                document.getElementById('navigationContainerOne').style.transform = 'translateY(0px)';
-                // document.getElementById('navigationContainerTwo').style.display = 'none';
-                document.getElementById('navigationContainerTwo').style.transform = 'translateY(-120px)';
-                document.getElementById('footerBar').style.transform = 'translateY(0px)';
-            }
-        }
-    });
+      } else {
+        // document.getElementById('navigationContainerOne').style.display = 'flex';
+        document.getElementById('navigationContainerOne').style.transform = 'translateY(0px)';
+        // document.getElementById('navigationContainerTwo').style.display = 'none';
+        document.getElementById('navigationContainerTwo').style.transform = 'translateY(-120px)';
+        document.getElementById('footerBar').style.transform = 'translateY(0px)';
+      }
+    }
+  });
 }
 let navObserver = new IntersectionObserver(callback2, options2)
 navObserver.observe(document.getElementById('topSection'));
 
-export { setNavigation, options2, callback2, navObserver, setFooter };
+
+// Search Code Starts
+
+// Imgur gallery search , imgur api is down.
+// async function searchCollectionQuery(query) {
+//   try {
+
+//     let images = await fetch(`https://api.imgur.com/3/gallery/search/top/month/1?q=${query}`, {
+//       method: "GET",
+//       headers: {
+//         "Authorization": "563492ad6f9170000100000119310439abd04938a6eab6c8fdaf39ee"
+//       }
+//     });
+
+//     let res = await images.json();
+//     console.log(res);
+
+//     // return res.photos;
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// }
+
+// searchCollectionQuery('cats');
+
+
+
+export { setNavigation, options2, callback2, navObserver, setFooter, setTag, handleSearchKey };
